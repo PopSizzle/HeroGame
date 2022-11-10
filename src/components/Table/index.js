@@ -1,8 +1,16 @@
 import React from 'react';
+import './table.css';
 
-const Table = ({ title, cols, data, edit, deleteFunction, editFunction}) => {
+const Table = ({ title, cols, data, edit, deleteFunction, editFunction, sort}) => {
 
   let keys = Object.keys(data);
+  let attrs = [...cols];
+  
+  for(let i=1; i<attrs.length; i++){
+    let words = attrs[i].split(' ');
+    console.log(words);
+    attrs[i] = words[0].slice(0,3).toLowerCase() + words[1].slice(0,3);
+  }
 
   return (
     <div>
@@ -15,7 +23,7 @@ const Table = ({ title, cols, data, edit, deleteFunction, editFunction}) => {
         <tbody>
           <tr>
             {cols.map((col, index) => (
-              <td key={index}><h4>{col}</h4></td>
+              <td key={index}><h4>{col}</h4>{index > 0 ? <div><button onClick={() =>sort(attrs[index], 'ascend')} className='arrow up'></button><button onClick={() => sort(attrs[index], 'descend')}className='arrow down'></button></div> : null}</td>
             ))}
           </tr>
           {
