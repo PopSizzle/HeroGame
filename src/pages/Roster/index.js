@@ -7,6 +7,7 @@ import './roster.css';
 // View hero details in a modal (preferably by hovering)
 
 // Sort by ascending/descending in a category
+// DONE
 
 // View Armorys
 
