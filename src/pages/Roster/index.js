@@ -19,28 +19,44 @@ const Roster = () =>{
 
   const [data, setData] = useState([
     {
-      name: "Bobby",
+      name: "Garruk",
+      hitPoi: 120,
+      phyAtt: 150,
+      magAtt: 0,
+      phyDef: 50,
+      magDef: 20,
+    },
+    {
+      name: "Ajani",
       hitPoi: 100,
       phyAtt: 120,
-      magAtt: 20,
-      phyDef: 60,
+      magAtt: 60,
+      phyDef: 80,
       magDef: 60,
     },
     {
-      name: "Sally",
+      name: "Urza",
+      hitPoi: 60,
+      phyAtt: 10,
+      magAtt: 200,
+      phyDef: 10,
+      magDef: 60,
+    },
+    {
+      name: "Jace",
       hitPoi: 80,
-      phyAtt: 20,
+      phyAtt: 30,
       magAtt: 120,
       phyDef: 40,
       magDef: 100,
     },
     {
-      name: "Urza",
-      hitPoi: 80,
-      phyAtt: 10,
-      magAtt: 200,
-      phyDef: 10,
-      magDef: 60,
+      name: "Liliana",
+      hitPoi: 70,
+      phyAtt: 20,
+      magAtt: 160,
+      phyDef: 20,
+      magDef: 80,
     }
   ]);
 
